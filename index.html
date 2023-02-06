@@ -7,10 +7,16 @@
     <title>Tic Tac Toe</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
-    <header>
+    <header id="main-header">
       <h1>Play Tic Tac Toe</h1>
       <p>Built with HTML, CSS and Javascript</p>
     </header>
@@ -20,11 +26,11 @@
         <form>
           <div>
             <label for="playername">Player name</label>
-            <input type="text" name="playername" id="playername">
+            <input type="text" name="playername" id="playername" />
           </div>
           <div>
-            <button type="button">Cancel</button>
-            <button type="submit">Confirm</button>
+            <button type="button" class="btn btn-alt">Cancel</button>
+            <button type="submit" class="btn">Confirm</button>
           </div>
         </form>
       </aside>
@@ -35,7 +41,7 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p>X</p>
-              <button>Edit</button>
+              <button class="btn btn-alt">Edit</button>
             </article>
           </li>
           <li>
@@ -43,30 +49,30 @@
               <h2>Player 2</h2>
               <h3>PLAYER NAME</h3>
               <p>O</p>
-              <button>Edit</button>
+              <button class="btn btn-alt">Edit</button>
             </article>
           </li>
-          <button>Start New Game</button>
+          <button class="btn">Start New Game</button>
         </ol>
       </section>
       <section id="active-game">
         <article>
-            <h3>You Won!<span id="winner-name">PlAYER NAME</span>!</h3>
-            <p>Click "Start New Game" above to start a new game!</p>
+          <h3>You Won!<span id="winner-name">PlAYER NAME</span>!</h3>
+          <p>Click "Start New Game" above to start a new game!</p>
         </article>
         <p>It's your turn<span id="active-player-name">PLAYER NAME</span>!</p>
         <ol>
-            <li></li>
-            <li></li>
-            <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
 
-            <li></li>
-            <li></li>
-            <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
 
-            <li></li>
-            <li></li>
-            <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ol>
       </section>
     </main>
