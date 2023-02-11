@@ -33,7 +33,10 @@ function savePlayerConfig(event) {
     "player-" + editedPlayer + "-data"
   );
   updatedPlayerDataElement.children[1].textContent = enteredPlayerName;
+
   players[editedPlayer - 1].name = enteredPlayerName;
+  // updatedPlayerDataElement.firstChild.nextSibling = enteredPlayerName;
+  // players[editedPlayer - 1].name = enteredPlayerName;
 
   closePlayerConfig();
 }

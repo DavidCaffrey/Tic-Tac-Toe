@@ -1,5 +1,12 @@
+const gameData = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
+];
 let editedPlayer = 0;
 let activePlayer = 0;
+let currentRound = 1;
+let isGameOver = false;
 
 const players = [
   {
@@ -21,13 +28,16 @@ const formElement = document.querySelector("form");
 const errorsOutputElement = document.getElementById("config-errors");
 
 const gameAreaElement = document.getElementById("active-game");
+const activePlayerNameElement = document.getElementById("active-player-name");
+const gameOverElement = document.getElementById("game-over");
 
 const cancelConfigBtnElement = document.getElementById("cancel-config-btn");
 const confirmConfigBtnElement = document.getElementById("confirm-config-btn");
 
 const startNewGameBtn = document.getElementById("start-game-btn");
 
-const gameFieldElements = document.querySelectorAll("#game-board li");
+// const gameFieldElements = document.querySelectorAll("#game-board li");
+const gameBoardElement = document.getElementById("game-board");
 
 editPlayer1Btn.addEventListener("click", openPlayerConfig);
 editPlayer2Btn.addEventListener("click", openPlayerConfig);
@@ -40,6 +50,7 @@ formElement.addEventListener("submit", savePlayerConfig);
 
 startNewGameBtn.addEventListener("click", startNewGame);
 
-for (const gameFieldElement of gameFieldElements) {
-  gameAreaElement.addEventListener("click", selectGameField);
-}
+// for (const gameFieldElement of gameFieldElements) {
+//   gameAreaElement.addEventListener("click", selectGameField);
+// }
+gameBoardElement.addEventListener("click", selectGameField);
